@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Web Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="calculator">
+    <h1>Web Calculator</h1>
+
+    
+    <div class="inputs">
+        <input type="text" id="numberInput" placeholder="Enter a number">
+        <input type="text" id="csvInput" placeholder="Enter CSV (e.g. 1,2,3)">
+        <input type="text" id="exponentInput" placeholder="Enter exponent" style="display: none;">
+        <input type="text" id="rootInput" placeholder="Enter root value" style="display: none;">
+    </div>
+
+    
+    <p id="errorMsg" class="error"></p>
+
+    
+    <h2 id="info" class="big" title="Info about the number">Information about the number</h2>
+
+    
+    <h3>Binary Operations</h3>
+    <div class="binary-section">
+        <button id="addition" onclick="store('+')">Addition</button>
+        <button id="multiplication" onclick="store('*')">Multiplication</button>
+        <button id="sqrt" onclick="showRootField()">Root</button>
+        <button id="exponentiation" onclick="showExponentField()">Exponentiation</button>
+        <button id="equal" onclick="eq()">=</button>
+    </div>
+
+    
+    <h3>Unary Operations</h3>
+    <div class="unary-section">
+        <button id="modulo" onclick="mod()">Modulo</button>
+        <button id="factorial" onclick="fact()">Factorial</button>
+    </div>
+
+    
+    <h3>CSV Operations</h3>
+    <div class="csv-section">
+        <button id="sumCSV" onclick="sumCSV()">Sum CSV</button>
+        <button id="averageCSV" onclick="averageCSV()">Average CSV</button>
+        <button id="sortCSV" onclick="sortCSV()">Sort CSV</button>
+        <button id="reverseCSV" onclick="reverseCSV()">Reverse CSV</button>
+        <button id="removeCSV" onclick="removeElement()">Remove Element</button>
+    </div>
+</div>
+
+<script src="calculator.js"></script>
+</body>
+</html>
